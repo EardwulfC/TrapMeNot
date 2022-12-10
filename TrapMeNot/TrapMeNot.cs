@@ -22,22 +22,25 @@ namespace TrapMeNot
 
         [HarmonyPatch(typeof(Trap))]
         static class TrapPatch
-        { 
+        {
             [HarmonyPrefix]
             [HarmonyPatch(nameof(Trap.OnTriggerEnter))]
-            static void OnTriggerEnterUpdate(ref Trap __instance)
+            static bool OnTriggerEnterPrefix(ref Trap __instance, ref Collider collider)
             {
-                if(__instance.m_triggeredByPlayers)
+                if (__instance.m_triggeredByPlayers)
                 {
-                    if (!Player.m_localPlayer.m_pvp)
+                    Player player = collider.GetComponentInParent<Player>();
+
+                    // If the colliding object is a Player and the player *does not* have PVP enabled, do nothing.
+                    if (player && !player.IsPVPEnabled())
                     {
-                        __instance.m_triggeredByPlayers = false;
+                        return false;
                     }
                 }
+
+                return true;
             }
         }
-
-
         public void OnDestroy()
         {
             _harmony?.UnpatchSelf();
