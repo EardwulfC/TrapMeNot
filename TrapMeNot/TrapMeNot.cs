@@ -31,7 +31,6 @@ namespace TrapMeNot
                 {
                     Player player = collider.GetComponentInParent<Player>();
 
-                    // If the colliding object is a Player and the player *does not* have PVP enabled, do nothing.
                     if (player && !player.IsPVPEnabled())
                     {
                         return false;

@@ -1,6 +1,6 @@
 # TrapMeNot
 
-  * Prevents the new Mistlands Traps from attacking players.
+  * Prevents the new Mistlands Traps from attacking players unless they are pvp enabled.
 
 ## Installation
 
@@ -15,7 +15,7 @@
 
 ## Instructions
 
-  * Mod instructions.
+  * Enjoy not setting off traps unless you are PvP flagged.
 
 ## Changelog
 
