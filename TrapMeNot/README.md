@@ -10,8 +10,8 @@
 
 ### Thunderstore (manual)
 
-  2. Go to Settings > Import local mod > Select `TrapMeNot_v1.0.0.zip`.
-  3. Click "OK/Import local mod" on the pop-up for information.
+  * Go to Settings > Import local mod > Select `TrapMeNot_v1.0.0.zip`.
+  * Click "OK/Import local mod" on the pop-up for information.
 
 ## Instructions
 
@@ -21,7 +21,8 @@
 
 ### 1.1.0
 
-* Bumped to version 1.1.0 for PTB Compatibility with 0.216.8
+* Added support for Comfy Valheim server to disable the PvP check if the player is in the Deep North or Ashlands Biome to support custom Creator Content in those zones.
+* Unless your world name starts with "ComfyEra" then this feature will not work on your world.
 
 ### 1.0.0
 
