@@ -35,7 +35,10 @@ namespace TrapMeNot
                     if (player && !player.IsPVPEnabled())
                     {
 
-                        if (TrapMeNot.IsComfyWorld() && Heightmap.FindBiome(player.transform.position) == Heightmap.Biome.DeepNorth || TrapMeNot.IsComfyWorld() && Heightmap.FindBiome(player.transform.position) == Heightmap.Biome.AshLands)
+                        bool IsComfyDeepNorth = TrapMeNot.IsComfyWorld() && Heightmap.FindBiome(player.transform.position) == Heightmap.Biome.DeepNorth;
+                        bool IsComfyAshlands = TrapMeNot.IsComfyWorld() && Heightmap.FindBiome(player.transform.position) == Heightmap.Biome.AshLands;
+
+                        if (IsComfyDeepNorth || IsComfyAshlands)
                         {
                             return true;
                         }
