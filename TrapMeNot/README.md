@@ -19,6 +19,10 @@
 
 ## Changelog
 
+### 1.1.0
+
+* Bumped to version 1.1.0 for PTB Compatibility with 0.216.8
+
 ### 1.0.0
 
   * Initial release.
