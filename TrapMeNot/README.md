@@ -21,7 +21,8 @@
 
 ### 1.1.0
 
-* Bumped to version 1.1.0 for PTB Compatibility with 0.216.8
+* Added support for Comfy Valheim server to disable the PvP check if the player is in the Deep North or Ashlands Biome to support custom Creator Content in those zones.
+* Unless your world name starts with "ComfyEra" then this feature will not work on your world.
 
 ### 1.0.0
 
