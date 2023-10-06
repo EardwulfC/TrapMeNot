@@ -4,6 +4,7 @@ using HarmonyLib;
 using System.Reflection;
 using UnityEngine;
 using UnityEngine.Rendering;
+using static Interpolate;
 
 namespace TrapMeNot
 {
@@ -12,7 +13,7 @@ namespace TrapMeNot
     {
         public const string PluginGuid = "Eardwulf.TrapMeNot";
         public const string PluginName = "TrapMeNot";
-        public const string PluginVersion = "1.1.0";
+        public const string PluginVersion = "1.1.1";
 
         Harmony _harmony;
 
@@ -37,8 +38,9 @@ namespace TrapMeNot
 
                         bool IsComfyDeepNorth = TrapMeNot.IsComfyWorld() && Heightmap.FindBiome(player.transform.position) == Heightmap.Biome.DeepNorth;
                         bool IsComfyAshlands = TrapMeNot.IsComfyWorld() && Heightmap.FindBiome(player.transform.position) == Heightmap.Biome.AshLands;
+                        /*bool IsComfySpaceBiome = TrapMeNot.IsComfyWorld() && TrapMeNot.IsInSpace();*/
 
-                        if (IsComfyDeepNorth || IsComfyAshlands)
+                        if (IsComfyDeepNorth || IsComfyAshlands /*|| IsComfySpaceBiome*/)
                         {
                             return true;
                         }
@@ -61,5 +63,11 @@ namespace TrapMeNot
                 && ZNet.m_world != null
                 && ZNet.m_world.m_name.StartsWith("ComfyEra");
         }
+
+        /*public static bool IsInSpace()
+        {
+            return
+            Utils.DistanceXZ(Player.m_localPlayer.transform.position, Vector3.zero) > 10500;
+        }*/
     }
 }

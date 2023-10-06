@@ -19,6 +19,10 @@
 
 ## Changelog
 
+### 1.1.1
+
+* Updated for compatibility with patch 0.217.24
+
 ### 1.1.0
 
 * Added support for Comfy Valheim server to disable the PvP check if the player is in the Deep North or Ashlands Biome to support custom Creator Content in those zones.
